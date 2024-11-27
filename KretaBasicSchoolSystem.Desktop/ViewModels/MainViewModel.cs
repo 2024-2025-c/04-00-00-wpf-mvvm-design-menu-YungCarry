@@ -7,7 +7,7 @@ using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
 using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Users;
+
 
 namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
@@ -18,7 +18,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
         private SchoolClassesViewModel _schoolClassesViewModel;
         private SchoolSubjectsViewModel _schoolSubjectsViewModel;
         private SchoolGradesViewModel _schoolGradesViewModel;
-        private UsersViewModel _usersViewModel;
+        
 
         public MainViewModel()
         {
@@ -27,7 +27,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolClassesViewModel = new SchoolClassesViewModel();
             _schoolSubjectsViewModel = new SchoolSubjectsViewModel();
             _schoolGradesViewModel = new SchoolGradesViewModel();
-            _usersViewModel = new UsersViewModel();
+            
         }
 
         public MainViewModel(
@@ -36,7 +36,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             SchoolClassesViewModel schoolClassesViewModel,
             SchoolSubjectsViewModel schoolSubjectsViewModel,
             SchoolGradesViewModel schoolGradesViewModel,
-            UsersViewModel usersViewModel
+           
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
@@ -44,7 +44,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             _schoolClassesViewModel = schoolClassesViewModel;
             _schoolSubjectsViewModel = schoolSubjectsViewModel;
             _schoolGradesViewModel = schoolGradesViewModel;
-            _usersViewModel = usersViewModel;
+            
 
 
             CurrentChildView = _controlPanelViewModel;
@@ -100,12 +100,6 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             CurrentChildView = _schoolGradesViewModel;
         }
 
-        [RelayCommand]
-        public void ShowUsers() 
-        {
-            Caption = "Felhasználó";
-            Icon = IconChar.Users;
-            CurrentChildView = _usersViewModel;
-        }
+        
     }
 }
