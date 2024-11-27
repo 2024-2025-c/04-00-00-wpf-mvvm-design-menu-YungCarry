@@ -35,7 +35,7 @@ namespace KretaBasicSchoolSystem.Desktop.ViewModels
             SchoolCitizensViewModel schoolCitizensViewModel, 
             SchoolClassesViewModel schoolClassesViewModel,
             SchoolSubjectsViewModel schoolSubjectsViewModel,
-            SchoolGradesViewModel schoolGradesViewModel,
+            SchoolGradesViewModel schoolGradesViewModel
            
             )
         {
